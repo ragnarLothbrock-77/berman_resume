@@ -1,0 +1,500 @@
+/*  Fonts */
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url('assets/fonts/Gotham/bold/GothamPro-Bold.eot');
+  src: local('Gotham Pro Bold'), local('GothamPro-Bold'),
+    url('assets/fonts/Gotham/bold/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Gotham/bold/GothamPro-Bold.woff2') format('woff2'),
+    url('assets/fonts/Gotham/bold/GothamPro-Bold.woff') format('woff'),
+    url('assets/fonts/Gotham/bold/GothamPro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url('assets/fonts/Gotham/light/GothamPro-Light.eot');
+  src: local('Gotham Pro Light'), local('GothamPro-Light'),
+    url('assets/fonts/Gotham/light/GothamPro-Light.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Gotham/light/GothamPro-Light.woff2') format('woff2'),
+    url('assets/fonts/Gotham/light/GothamPro-Light.woff') format('woff'),
+    url('assets/fonts/Gotham/light/GothamPro-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url('assets/fonts/Gotham/regullar/GothamPro.eot');
+  src: local('Gotham Pro'), local('GothamPro'),
+    url('assets/fonts/Gotham/regullar/GothamPro.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Gotham/regullar/GothamPro.woff2') format('woff2'),
+    url('assets/fonts/Gotham/regullar/GothamPro.woff') format('woff'),
+    url('assets/fonts/Gotham/regullar/GothamPro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+/* Basic Styles */
+:root {
+  --font: 'Gotham Pro', sans-serif;
+  --white-color: #f8f8ff;
+  --black-color: #1B1212;
+  --primary-color: #9FE7F5;
+  --primary-accent-color: #429EBD;
+  --primary-accent-color2: #053F5C;
+  --contrast-color: #f7ad09;
+  --contrast-color2: #F27F0C;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gotham Pro';
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--black-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  margin: 0 auto;
+
+}
+
+.sidebar {
+  max-width: 358px;
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  min-height: 100vh;
+  background: var(--white-color);
+}
+
+.main {
+  background: var(--white-color);
+  width: 100%;
+}
+
+.figure {
+  position: absolute;
+  width: 80px;
+  top: 50%;
+  left: -10px;
+  transform: translateY(-55%);
+  z-index: -10;
+  border-bottom: 35px solid rgba(247, 173, 9, 0.7);
+  border-right: 40px solid transparent;
+}
+
+.title-large {
+  font-weight: 300;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.title-medium {
+  width: fit-content;
+  position: relative;
+  font-weight: 300;
+  font-size: 20px;
+  text-transform: uppercase;
+  z-index: 200;
+  line-height: 1px;
+}
+
+
+.title-small {
+  font-size: 18px;
+  color: var(--black-color);
+  font-weight: bold;
+}
+
+
+
+
+
+/* Sidebar Styles */
+.sidebar-top {
+  background: var(--primary-accent-color);
+}
+
+.sidebar-top__name {
+  padding: 130px 10px 130px 0;
+  text-align: end;
+  color: #f8f8ff;
+}
+
+.poster {
+  margin: 20px 0;
+}
+
+.poster__image {
+  width: 100%;
+}
+
+
+
+
+.infobar {
+  background: var(--primary-accent-color2);
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+}
+
+.infobar__title {
+  color: var(--contrast-color);
+  margin: 0;
+}
+
+
+
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contacts-item {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.contacts-item__icon {
+  width: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.contacts-item__link {
+  color: var(--white-color);
+  text-decoration: none;
+  line-height: 15px;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+
+
+
+.personal {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.personal-item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.personal-item__title {
+  color: var(--white-color);
+}
+
+.personal-item__text {
+  color: var(--white-color);
+  font-weight: 300;
+  font-size: 16px;
+}
+
+
+
+
+.hobbies {}
+
+.hobbies__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.hobbies-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-direction: column;
+  position: relative;
+}
+
+.hobbies-item::after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 12px;
+  background: var(--white-color);
+  left: 50%;
+  top: 50%;
+}
+
+.hobbies-item__icon {}
+
+.hobbies-item__text {
+  color: var(--white-color);
+  font-weight: 300;
+  font-size: 16px;
+  border-top: 2px solid var(--white-color);
+  width: 90%;
+  text-align: center;
+  padding-top: 20px;
+}
+
+
+
+
+/* Main Content Styles */
+.main {}
+
+.main-top {
+  min-height: 298px;
+}
+
+.main-top__surname {
+  padding: 160px 0px 0px 10px;
+  text-align: start;
+}
+
+.main-top__position {
+  margin: 50px 0 0 13px;
+  color: var(--black-color);
+}
+
+.main-content {
+  margin: 60px 40px 40px 40px;
+}
+
+.main-content-block {
+  margin-bottom: 140px;
+}
+
+
+
+
+.skills {}
+
+.skills__title {}
+
+.skills-description {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 40px;
+  list-style: none;
+}
+
+.skills-description__item {
+  position: relative;
+}
+
+.skills-description__item::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: -20px;
+  transform: translateY(-70%);
+  width: 4px;
+  height: 4px;
+  background: var(--contrast-color);
+  border-radius: 50%;
+}
+
+
+
+.skills-list {
+  margin-top: 70px;
+  padding: 0;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.skills-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.skills-item__title {}
+
+.skills-item__icon {}
+
+.skills-item__progressbar {
+  position: relative;
+  width: 50%;
+  height: 2px;
+  background: var(--black-color);
+  border-radius: 10px;
+}
+
+.skills-item__progressbar::after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  background: var(--contrast-color);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.html::after {
+  width: 90%;
+}
+
+.css::after {
+  width: 90%;
+}
+
+.js::after {
+  width: 80%;
+}
+
+.ts::after {
+  width: 60%;
+}
+
+.react::after {
+  width: 80%;
+}
+
+.redux::after {
+  width: 70%;
+}
+
+.webpack::after {
+  width: 80%;
+}
+
+.git::after {
+  width: 60%;
+}
+
+
+
+
+
+
+.experience {}
+
+.experience__title {}
+
+.experience-item {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.position {}
+
+.position-header {
+  margin-bottom: 50px;
+}
+
+.position-header__main {}
+
+.position-header__additional {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.position__name {}
+
+.position__organization {}
+
+
+
+.position-duties {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+}
+
+.position-duties__item {
+  position: relative;
+}
+
+.position-duties__item:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: -20px;
+  transform: translateY(-70%);
+  width: 4px;
+  height: 4px;
+  background: var(--contrast-color);
+  border-radius: 50%;
+}
+
+
+
+
+
+
+.education {}
+
+.education__title {
+  margin-bottom: 40px;
+}
+
+.education-main {}
+
+.education-courses {
+  margin-top: 30px;
+}
+
+.courses {}
+
+.courses__title {
+  margin-bottom: 30px;
+}
+
+.courses__list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-left: 40px;
+  gap: 30px;
+}
+
+.courses-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.courses-item__name {
+  font-size: 17px;
+  color: var(--black-color);
+}
+
+.courses-item__description {}
